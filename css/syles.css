@@ -2,7 +2,7 @@
 * { margin: 0px; padding: 0px; }
 
 /*BODY*/
-body { background: black; }
+body { background: black; min-height: 100vh; }
 
 /*GRILLA*/
 #grilla { display: grid; grid-template-areas: "nav nav nav" "form form form" "work work work" "blog blog blog" "footer footer footer"; grid-template-rows: auto auto auto; grid-template-columns: auto auto auto; }
@@ -32,34 +32,35 @@ nav { grid-area: nav; }
 .color-fuente { color: #33ff66; }
 
 /*h1 GASTÓN CARREÑO*/
-strong h1 { margin-top: auto; padding: 10px; font-family: "Roboto Mono", monospace; font-weight: 700; font-size: 2rem; }
+strong h1 { display: flex; text-align: center; font-family: "Roboto Mono", monospace; font-weight: 700; font-size: 2rem; margin: 10px; }
 
 /*MENU NAV*/
-.menu-nav { list-style: none; display: flex; align-items: center; justify-content: space-around; align-items: center; margin: 0; padding: 0; background: #030303; background: linear-gradient(90deg, #030303 0%, #1a1a1a 81%); }
+.navbar { margin: 0; padding: 0; background: black; background: linear-gradient(90deg, black 24%, #111010 60%, #111010 81%, #161515 95%); }
 
-.menu-nav li { display: flex; flex-direction: row; margin-bottom: 10px; margin-top: 10px; }
+.navbar li { margin: 10px; }
 
-.menu-nav a { color: #33ff66; text-decoration: none; font-size: 18px; }
+.navbar a { color: #33ff66; text-decoration: none; font-size: 18px; }
 
-.menu-nav a:hover { color: white; text-shadow: 0 0 5px #33ff66; }
+.navbar a:hover { color: white; text-shadow: 0 0 5px #33ff66; }
 
-@media (max-width: 920px) { .menu-nav { flex-direction: column; } }
+.navbar .menu-nav__item { margin-top: 30px; }
 
 /*TEXTO PRINCIPAL INDEX*/
-.texto-principal { font-size: 40px; color: #33ff66; margin: 50px; }
+.texto-principal { font-size: 40px; color: #33ff66; margin: 50px; position: relative; }
 
-/*DIVISIÓN*/
-.ancho-100 { width: 100%; background-color: pink; }
-
-.ancho-50 { width: 50%; background-color: pink; }
+.texto-principal .span2 { position: absolute; right: 0; width: 0; background-color: black; border-left: 1px solid #33ff66; }
 
 /*CONTENIDO GENERAL*/
-.content { min-height: 400px; color: #33ff66; text-align: center; margin: 20px; }
+.content { color: #33ff66; text-align: center; margin: 20px; }
 
 /*WHATSAPP ICONO*/
 .whatsapp-icono { position: fixed; right: 55px; z-index: 100; bottom: 60px; }
 
 .whatsapp-icono:hover { transform: scale(1.1); }
+
+.fa-whatsapp { color: #33ff66; }
+
+.fa-whatsapp:hover { color: white; text-shadow: 0 0 5px #33ff66; }
 
 /*PROYECTOS*/
 .flexbox-work { display: flex; background: black; justify-content: end; }
@@ -113,4 +114,4 @@ strong h1 { margin-top: auto; padding: 10px; font-family: "Roboto Mono", monospa
 
 .footer-text { color: gray; font-size: 20px; padding: 8px; }
 
-.footer-redes { padding: 10px; }
+.footer-redes { padding: 10px; color: #33ff66; }
