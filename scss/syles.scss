@@ -260,7 +260,7 @@ justify-content: center;
 .form-contact{
 	margin:50px auto;
 	border-radius: $BorderRadius20;
-	width: 70%;
+	width: 50%;
 	height: 100%;
 	background: $BackgroundContact1;
 	background: $BackgroundContact2;
@@ -310,8 +310,14 @@ justify-content: center;
 		border: none;
 		outline: none;
 	}
+	
     
 }
+@media (max-width: 530px) {
+	.form-contact {
+			width: 70%;
+	  }}
+
 
 @mixin button {
 	background-color: $BackgroundColorbutton; border: $BackgroundColorbutton; padding: 9px 20px; font-size: 20px; border-radius: 5px; color: white;
@@ -323,7 +329,6 @@ justify-content: center;
 .send-button{
     @include button();
 }
-
 
 /*FOOTER*/
 .footer-container{
