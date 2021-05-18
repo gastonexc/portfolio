@@ -39,19 +39,23 @@ strong h1 { display: flex; text-align: center; justify-content: center; font-fam
 
 .navbar li { margin: 10px; }
 
-.navbar a { color: #33ff66; text-decoration: none; font-size: 18px; }
+.navbar a { color: white; text-decoration: none; font-size: 18px; }
 
-.navbar a:hover { color: white; text-shadow: 0 0 5px #33ff66; }
+.navbar a:hover { color: #33ff66; text-shadow: 0 0 5px #33ff66; }
 
-.navbar .menu-nav__item { margin-top: 30px; }
+.navbar .menu-nav__item { margin-top: 30px; margin-left: 40px; }
+
+@media (min-width: 992px) { .navbar .nav-work { margin-left: 400px; } }
+
+@media (min-width: 1300px) { .navbar .nav-work { margin-left: 600px; } }
 
 /*TEXTO PRINCIPAL INDEX*/
-.texto-principal { font-size: 40px; color: #33ff66; margin: 50px; position: relative; }
+.texto-principal1 { font-size: 40px; color: #33ff66; margin: 50px; padding: 20px; }
 
-.texto-principal .span2 { position: absolute; right: 0; width: 0; background-color: black; border-left: 1px solid #33ff66; }
+.texto-principal2 { font-size: 40px; color: #33ff66; margin-top: 50px; margin-left: 70px; }
 
 /*CONTENIDO GENERAL*/
-.content { color: #33ff66; text-align: center; margin: 20px; }
+.content { color: #33ff66; text-align: justify; margin: 30px 50px; }
 
 /*WHATSAPP ICONO*/
 .whatsapp-icono { position: fixed; right: 55px; z-index: 100; bottom: 80px; }

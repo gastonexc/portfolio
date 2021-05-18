@@ -88,19 +88,31 @@ justify-content: center;
         margin: 10px;
     }
     a{
-        color: $Color-Principal;
+        color: white;
 		text-decoration: none;
 	    font-size: 18px;
 
         &:hover{
-            color:white;
+            color:$Color-Principal;
             text-shadow: $Text-Shadow;
         }
     }
 	.menu-nav__item {
 		margin-top: 30px;
+		margin-left: 40px;
 		
 	}
+
+	@media (min-width:992px){
+		.nav-work{
+			margin-left: 400px;
+		}
+		 }
+	@media (min-width:1300px){
+		.nav-work{
+			margin-left: 600px;
+		}
+			}
 }
 
 // @media (max-width: 920px) {
@@ -110,11 +122,18 @@ justify-content: center;
 // }
 
 /*TEXTO PRINCIPAL INDEX*/
-.texto-principal{
+.texto-principal1{
 	font-size: 40px;
 	color: $Color-Principal;
 	margin: 50px;
-	position: relative;
+	padding: 20px; }
+	
+.texto-principal2{
+	font-size: 40px;
+	color: $Color-Principal;
+	margin-top: 50px;
+	margin-left: 70px;
+	
 
 	// .span1{
 	// 	position: absolute;
@@ -123,20 +142,20 @@ justify-content: center;
 	// 	background-color: black;
 	// 	border-left: 1px solid $Color-Principal;
 	// }
-	.span2{
-		position: absolute;
-		right: 0;
-		width: 0;
-		background-color: black;
-		border-left: 1px solid $Color-Principal;
-	}
+	// .span2{
+	// 	position: absolute;
+	// 	right: 0;
+	// 	width: 0;
+	// 	background-color: black;
+	// 	border-left: 1px solid $Color-Principal;
+	// }
 }
 
 /*CONTENIDO GENERAL*/
 .content{
 	color:$Color-Principal;
-	text-align: center;
-	margin: 20px;
+	text-align: justify;
+	margin: 30px 50px;
 }
 
 /*WHATSAPP ICONO*/
