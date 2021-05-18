@@ -54,13 +54,15 @@ strong h1 { display: flex; text-align: center; justify-content: center; font-fam
 .content { color: #33ff66; text-align: center; margin: 20px; }
 
 /*WHATSAPP ICONO*/
-.whatsapp-icono { position: fixed; right: 55px; z-index: 100; bottom: 60px; }
+.whatsapp-icono { position: fixed; right: 55px; z-index: 100; bottom: 80px; }
 
 .whatsapp-icono:hover { transform: scale(1.1); }
 
 .fa-whatsapp { color: #33ff66; }
 
 .fa-whatsapp:hover { color: white; text-shadow: 0 0 5px #33ff66; }
+
+@media (max-width: 768px) { .whatsapp-icono { bottom: 180px; } }
 
 /*PROYECTOS*/
 .flexbox-work { display: flex; background: black; justify-content: end; }
@@ -112,8 +114,14 @@ strong h1 { display: flex; text-align: center; justify-content: center; font-fam
 .send-button:hover { background-color: #33ff66; border: #33ff66; color: black; }
 
 /*FOOTER*/
-.footer-container { display: flex; align-items: center; flex-direction: column; justify-content: center; background: #292929; background: radial-gradient(circle, #292929 0%, black 100%); }
+.footer-container { margin-top: 100px; display: flex; align-items: center; flex-direction: column; justify-content: center; background: black; background: linear-gradient(90deg, black 24%, #111010 60%, #111010 81%, #161515 95%); text-decoration: none; }
 
-.footer-text { color: gray; font-size: 20px; padding: 8px; }
+.footer-text { color: white; font-size: 20px; padding: 8px; margin-top: 10px; }
 
-.footer-redes { padding: 10px; color: #33ff66; }
+.footer-text:hover { color: white; text-shadow: 0 0 5px #33ff66; }
+
+.footer-redes a { text-decoration: none; }
+
+.iconredes { color: #33ff66; margin: 20px 10px; justify-content: space-around; display: flex; margin-bottom: 50px; }
+
+.iconredes:hover { color: white; text-shadow: 0 0 5px #33ff66; }
