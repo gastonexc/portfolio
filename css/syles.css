@@ -32,10 +32,10 @@ nav { grid-area: nav; }
 .color-fuente { color: #33ff66; }
 
 /*h1 GASTÓN CARREÑO*/
-strong h1 { display: flex; text-align: center; font-family: "Roboto Mono", monospace; font-weight: 700; font-size: 2rem; margin: 10px; }
+strong h1 { display: flex; text-align: center; justify-content: center; font-family: "Roboto Mono", monospace; font-weight: 700; font-size: 2rem; margin: 10px; }
 
 /*MENU NAV*/
-.navbar { margin: 0; padding: 0; background: black; background: linear-gradient(90deg, black 24%, #111010 60%, #111010 81%, #161515 95%); }
+.navbar { margin: 0; padding: 0; background: black; background: linear-gradient(90deg, black 24%, #111010 60%, #111010 81%, #161515 95%); justify-content: flex-end; text-align: center; }
 
 .navbar li { margin: 10px; }
 
@@ -95,7 +95,7 @@ strong h1 { display: flex; text-align: center; font-family: "Roboto Mono", monos
 .about { display: inline-block; color: #33ff66; text-align: left; height: 200px; margin: 40px; }
 
 /*FORM CONTACT*/
-.form-contact { margin: 50px auto; border-radius: 20px; width: 50%; height: 100%; background: #1a1a1a; background: linear-gradient(90deg, #1a1a1a 26%, black 100%); color: #33ff66; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+.form-contact { margin: 50px auto; border-radius: 20px; width: 70%; height: 100%; background: #1a1a1a; background: linear-gradient(90deg, #1a1a1a 26%, black 100%); color: #33ff66; padding: 20px; display: flex; flex-direction: column; align-items: center; }
 
 .form-contact:hover { box-shadow: 0 0 10px #33ff66, 0 0 20px #33ff66, 0 0 40px #33ff66; }
 

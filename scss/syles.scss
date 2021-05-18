@@ -66,6 +66,7 @@ $font-sizes:(
 strong h1 {
 display: flex;
 text-align: center;
+justify-content: center;
 	
 	font-family: $Fuente;
 	font-weight: 700;
@@ -79,6 +80,8 @@ text-align: center;
 	padding: 0;
 	background: $BackgroundNav1;
 	background: $BackgroundNav2;
+	justify-content: flex-end;
+	text-align: center;
 
     li{
         
@@ -257,7 +260,7 @@ text-align: center;
 .form-contact{
 	margin:50px auto;
 	border-radius: $BorderRadius20;
-	width: 50%;
+	width: 70%;
 	height: 100%;
 	background: $BackgroundContact1;
 	background: $BackgroundContact2;
