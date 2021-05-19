@@ -71,23 +71,17 @@ justify-content: center;
 		
 	}
 
-	@media (min-width:992px){
+	@media (min-width:980px){
 		.nav-work{
-			margin-left: 400px;
+			margin-left: 220px;
 		}
 		 }
 	@media (min-width:1300px){
 		.nav-work{
-			margin-left: 600px;
+			margin-left: 500px;
 		}
 			}
 }
-
-// @media (max-width: 920px) {
-//     .menu-nav {
-//             flex-direction: column;
-//       }
-// }
 
 /*TEXTO PRINCIPAL INDEX*/
 .texto-principal1{
@@ -101,25 +95,6 @@ justify-content: center;
 	color: $Color-Principal;
 	margin-top: 50px;
 	margin-left: 70px;
-
-	
-	  
-	
-
-	// .span1{
-	// 	position: absolute;
-	// 	right: 0;
-	// 	width: 0;
-	// 	background-color: black;
-	// 	border-left: 1px solid $Color-Principal;
-	// }
-	// .span2{
-	// 	position: absolute;
-	// 	right: 0;
-	// 	width: 0;
-	// 	background-color: black;
-	// 	border-left: 1px solid $Color-Principal;
-	// }
 }
 
 .maquina-escribir {
@@ -135,7 +110,7 @@ justify-content: center;
 	right: 0;
 	height: 100%;
 	position: absolute;
-	animation: maquinaescribir 6s infinite alternate steps(60);
+	animation: maquinaescribir 5s infinite alternate steps(55);
   }
   
   @keyframes maquinaescribir {
@@ -181,6 +156,32 @@ justify-content: center;
 	}
 }
 /*PROYECTOS*/
+
+.maquina-work {
+	background: black;
+	position: relative;
+  }
+  
+  .maquina-work::after {
+	content: "";
+	border-left: 3px solid $Color-Principal;
+	background: black;
+	margin: 4px;
+	right: 0;
+	height: 100%;
+	position: absolute;
+	animation: maquinaescribir 1.5s infinite alternate steps(10);
+  }
+  
+  @keyframes maquinaescribir {
+	from {
+	  width: 100%;
+	}
+	to {
+	  width: 0;
+	}
+  }
+
 .cards {
 	font-family: $Fuente;
 	display: flex;
@@ -409,7 +410,30 @@ justify-content: center;
 
 /*BLOG*/
 
-
+.maquina-blog {
+	background: black;
+	position: relative;
+  }
+  
+  .maquina-blog::after {
+	content: "";
+	border-left: 3px solid $Color-Principal;
+	background: black;
+	margin: 4px;
+	right: 0;
+	height: 100%;
+	position: absolute;
+	animation: maquinaescribir 1s infinite alternate steps(6);
+  }
+  
+  @keyframes maquinaescribir {
+	from {
+	  width: 100%;
+	}
+	to {
+	  width: 0;
+	}
+  }
 
 .blog-container{
 	position: relative;
@@ -435,7 +459,8 @@ justify-content: center;
 		align-items: center;
 		border-top: 1px solid rgba(255, 255, 255, 0.05);
 		border-left: 1px solid rgba(255, 255, 255, 0.05);
-		backdrop-filter: blur(5px);
+		
+		box-shadow: 0 0 2px gray, 0 0 5px gray, 0 0 10px gray;
 
 		&:hover{
 			box-shadow: $Box-Shadow__contact;
@@ -446,7 +471,7 @@ justify-content: center;
 		padding: 20px;
 		text-align: center;
 		transition: 0.5s;
-		transform: translateY(100px);
+		transform: translateY(60px);
 		opacity: 0;
 
 		&:hover{
@@ -487,14 +512,103 @@ justify-content: center;
 
 /*ABOUT*/
 .about{
-	display: inline-block;
-	color:$Color-Principal;
-	text-align: left;
-	height: 200px;
-	margin:40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
+.maquina-about {
+	background: black;
+	position: relative;
+  }
+  
+  .maquina-about::after {
+	content: "";
+	border-left: 3px solid $Color-Principal;
+	background: black;
+	margin: 4px;
+	right: 0;
+	height: 100%;
+	position: absolute;
+	animation: maquinaescribir 2s infinite alternate steps(10);
+  }
+  
+  @keyframes maquinaescribir {
+	from {
+	  width: 100%;
+	}
+	to {
+	  width: 0;
+	}
+  }
+
+  .accordion{
+
+	  .box{
+		  position: relative;
+		  margin: 10px 20px;
+		  background: rgba(54, 52, 52, 0.1);
+
+		  .title-about{
+			  position: relative;
+			  padding: 10px;
+			  background: $BackgroundNav1;
+			  background: $BackgroundNav2;
+			  color: white;
+			  cursor: pointer;
+
+			  &::before{
+				  content: "+";
+				  position: absolute;
+				  top: 50%;
+				  right: 20px;
+				  transform: translateY(-50%);
+				  font-size: 1.5rem;
+			  }
+		  }
+
+		  .content-about{
+			  position: relative;
+			  
+			  background: $BackgroundContact1;
+			  background: $BackgroundContact2;
+			  height: 0;
+			  overflow: hidden;
+			  transition: 0.5s;
+			  overflow: auto;
+		  }
+	  }
+
+  }
+
+
 /*FORM CONTACT*/
+.maquina-contact {
+	background: black;
+	position: relative;
+  }
+  
+  .maquina-contact::after {
+	content: "";
+	border-left: 3px solid $Color-Principal;
+	background: black;
+	margin: 4px;
+	right: 0;
+	height: 100%;
+	position: absolute;
+	animation: maquinaescribir 2s infinite alternate steps(20);
+  }
+  
+  @keyframes maquinaescribir {
+	from {
+	  width: 100%;
+	}
+	to {
+	  width: 0;
+	}
+  }
+
+
 .form-contact{
 	margin:50px auto;
 	border-radius: $BorderRadius20;

@@ -27,17 +27,17 @@
 					<a class="" href="index.html"><strong><h1 class="home-nav">Gastón Carreño</h1></strong></a>
 				</li>
 				<li class="menu-nav__item active">
-					<a class="menu-nav__link nav-work" href="work.html">Work</a>
+					<a class="menu-nav__link nav-work" href="work.html">Proyectos</a>
 				</li>
 				<li class=" menu-nav__item">
 					<a class="menu-nav__link" href="blog.html">Blog</a>
 				</li>
 				
 				<li class=" menu-nav__item">
-					<a class="menu-nav__link" href="about.html">About</a>
+					<a class="menu-nav__link" href="about.html">Sobre mí</a>
 				</li>
 				<li class=" menu-nav__item">
-					<a class="menu-nav__link" href="contact.html">Contact</a>
+					<a class="menu-nav__link" href="contact.html">Contacto</a>
 				</li>
 			  </ul>
 			</div>
@@ -45,14 +45,14 @@
 	</header>
 
 	<div class="texto-principal2"> <!-- Pantalla principal -->
-		<p class="font-bold">>Blog</p> 
+		<p class="font-bold"><span class="maquina-blog">>Blog.</span></p> 
 	</div>
 
 	<div class="blog-container">
 		<div class="blog-article">
 			<div class="blog-content">
 				<h2>01</h2>
-				<h3>Article 1</h3>
+				<h3>Por qué estudiar programación?</h3>
 				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure hic dicta sed fugit consequuntur labore aperiam, quod voluptatum magnam similique.</p>
 				<a href="">Leer más</a>
 			</div>
@@ -60,7 +60,7 @@
 		<div class="blog-article">
 			<div class="blog-content">
 				<h2>02</h2>
-				<h3>Article 2</h3>
+				<h3>Ruta de aprendizaje desarrollo web</h3>
 				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure hic dicta sed fugit consequuntur labore aperiam, quod voluptatum magnam similique.</p>
 				<a href="">Leer más</a>
 			</div>
@@ -68,7 +68,7 @@
 		<div class="blog-article">
 			<div class="blog-content">
 				<h2>03</h2>
-				<h3>Article 3</h3>
+				<h3>Tips para principiantes</h3>
 				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure hic dicta sed fugit consequuntur labore aperiam, quod voluptatum magnam similique.</p>
 				<a href="">Leer más</a>
 			</div>
@@ -90,9 +90,7 @@
 	<!-- JAVASCRIPT CARD -->
 	<script type="text/javascript" src="js/vanilla-tilt.js"></script>
 	<script type="text/javascript">
-		VanillaTilt.init(document.querySelectorAll(".blog-article"), {
-			max: 25,
-			speed: 400
+		VanillaTilt.init(document.querySelectorAll(".blog-article"), {max: 25, speed: 400, glare: true, "max-glare":1,
 		});
 	</script>
 

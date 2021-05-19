@@ -30,9 +30,9 @@ strong h1 { display: flex; text-align: center; justify-content: center; font-fam
 
 .navbar .menu-nav__item { margin-top: 30px; margin-left: 40px; }
 
-@media (min-width: 992px) { .navbar .nav-work { margin-left: 400px; } }
+@media (min-width: 980px) { .navbar .nav-work { margin-left: 220px; } }
 
-@media (min-width: 1300px) { .navbar .nav-work { margin-left: 600px; } }
+@media (min-width: 1300px) { .navbar .nav-work { margin-left: 500px; } }
 
 /*TEXTO PRINCIPAL INDEX*/
 .texto-principal1 { font-size: 37px; color: #33ff66; margin: 50px; padding: 20px; }
@@ -41,7 +41,7 @@ strong h1 { display: flex; text-align: center; justify-content: center; font-fam
 
 .maquina-escribir { background: black; position: relative; }
 
-.maquina-escribir::after { content: ""; border-left: 3px solid #33ff66; background: black; margin: 4px; right: 0; height: 100%; position: absolute; animation: maquinaescribir 6s infinite alternate steps(60); }
+.maquina-escribir::after { content: ""; border-left: 3px solid #33ff66; background: black; margin: 4px; right: 0; height: 100%; position: absolute; animation: maquinaescribir 5s infinite alternate steps(55); }
 
 @keyframes maquinaescribir { from { width: 100%; }
   to { width: 0; } }
@@ -61,6 +61,13 @@ strong h1 { display: flex; text-align: center; justify-content: center; font-fam
 @media (max-width: 768px) { .whatsapp-icono { bottom: 180px; } }
 
 /*PROYECTOS*/
+.maquina-work { background: black; position: relative; }
+
+.maquina-work::after { content: ""; border-left: 3px solid #33ff66; background: black; margin: 4px; right: 0; height: 100%; position: absolute; animation: maquinaescribir 1.5s infinite alternate steps(10); }
+
+@keyframes maquinaescribir { from { width: 100%; }
+  to { width: 0; } }
+
 .cards { font-family: "Roboto Mono", monospace; display: flex; justify-content: center; align-items: center; margin: 20px; }
 
 @media (max-width: 1080px) { .cards { flex-wrap: wrap; margin-top: 20px; margin-bottom: 40px; } }
@@ -126,13 +133,20 @@ strong h1 { display: flex; text-align: center; justify-content: center; font-fam
 @media (max-width: 1080px) { .flexbox-work { flex-direction: column; } }
 
 /*BLOG*/
+.maquina-blog { background: black; position: relative; }
+
+.maquina-blog::after { content: ""; border-left: 3px solid #33ff66; background: black; margin: 4px; right: 0; height: 100%; position: absolute; animation: maquinaescribir 1s infinite alternate steps(6); }
+
+@keyframes maquinaescribir { from { width: 100%; }
+  to { width: 0; } }
+
 .blog-container { position: relative; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; z-index: 1; }
 
-.blog-container .blog-article { position: relative; width: 280px; height: 400px; margin: 20px; border-radius: 15px; background: rgba(54, 52, 52, 0.1); overflow: hidden; display: flex; justify-content: center; align-items: center; border-top: 1px solid rgba(255, 255, 255, 0.05); border-left: 1px solid rgba(255, 255, 255, 0.05); backdrop-filter: blur(5px); }
+.blog-container .blog-article { position: relative; width: 280px; height: 400px; margin: 20px; border-radius: 15px; background: rgba(54, 52, 52, 0.1); overflow: hidden; display: flex; justify-content: center; align-items: center; border-top: 1px solid rgba(255, 255, 255, 0.05); border-left: 1px solid rgba(255, 255, 255, 0.05); box-shadow: 0 0 2px gray, 0 0 5px gray, 0 0 10px gray; }
 
 .blog-container .blog-article:hover { box-shadow: 0 0 10px #33ff66, 0 0 20px #33ff66, 0 0 40px #33ff66; }
 
-.blog-container .blog-content { padding: 20px; text-align: center; transition: 0.5s; transform: translateY(100px); opacity: 0; }
+.blog-container .blog-content { padding: 20px; text-align: center; transition: 0.5s; transform: translateY(60px); opacity: 0; }
 
 .blog-container .blog-content:hover { transform: translateY(0px); opacity: 1; }
 
@@ -145,9 +159,31 @@ strong h1 { display: flex; text-align: center; justify-content: center; font-fam
 .blog-container .blog-content a { position: relative; display: inline-block; padding: 8px 20px; margin-top: 15px; background: white; color: black; border-radius: 20px; text-decoration: none; font-weight: 500; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); }
 
 /*ABOUT*/
-.about { display: inline-block; color: #33ff66; text-align: left; height: 200px; margin: 40px; }
+.about { display: flex; justify-content: center; align-items: center; }
+
+.maquina-about { background: black; position: relative; }
+
+.maquina-about::after { content: ""; border-left: 3px solid #33ff66; background: black; margin: 4px; right: 0; height: 100%; position: absolute; animation: maquinaescribir 2s infinite alternate steps(10); }
+
+@keyframes maquinaescribir { from { width: 100%; }
+  to { width: 0; } }
+
+.accordion .box { position: relative; margin: 10px 20px; background: rgba(54, 52, 52, 0.1); }
+
+.accordion .box .title-about { position: relative; padding: 10px; background: black; background: linear-gradient(90deg, black 24%, #111010 60%, #111010 81%, #161515 95%); color: white; cursor: pointer; }
+
+.accordion .box .title-about::before { content: "+"; position: absolute; top: 50%; right: 20px; transform: translateY(-50%); font-size: 1.5rem; }
+
+.accordion .box .content-about { position: relative; background: #1a1a1a; background: linear-gradient(90deg, #1a1a1a 26%, black 100%); height: 0; overflow: hidden; transition: 0.5s; overflow: auto; }
 
 /*FORM CONTACT*/
+.maquina-contact { background: black; position: relative; }
+
+.maquina-contact::after { content: ""; border-left: 3px solid #33ff66; background: black; margin: 4px; right: 0; height: 100%; position: absolute; animation: maquinaescribir 2s infinite alternate steps(20); }
+
+@keyframes maquinaescribir { from { width: 100%; }
+  to { width: 0; } }
+
 .form-contact { margin: 50px auto; border-radius: 20px; width: 50%; height: 100%; background: #1a1a1a; background: linear-gradient(90deg, #1a1a1a 26%, black 100%); color: #33ff66; padding: 20px; display: flex; flex-direction: column; align-items: center; }
 
 .form-contact:hover { box-shadow: 0 0 10px #33ff66, 0 0 20px #33ff66, 0 0 40px #33ff66; }
