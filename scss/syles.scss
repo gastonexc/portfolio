@@ -11,6 +11,13 @@ body {
 	background: black;
 	height: 100vh;
 }
+
+body::-webkit-scrollbar{
+	width: 5px;
+	height: 50%;
+	background: #161515;
+	border-radius: 20px;
+}
 /*FUENTE*/
 $font-sizes:(
 	"light": 300,
@@ -440,11 +447,8 @@ justify-content: center;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	
 	flex-wrap: wrap;
 	z-index: 1;
-
-
 
 	.blog-article{
 		position: relative;
@@ -459,7 +463,6 @@ justify-content: center;
 		align-items: center;
 		border-top: 1px solid rgba(255, 255, 255, 0.05);
 		border-left: 1px solid rgba(255, 255, 255, 0.05);
-		
 		box-shadow: 0 0 2px gray, 0 0 5px gray, 0 0 10px gray;
 
 		&:hover{
@@ -507,6 +510,10 @@ justify-content: center;
 			text-decoration: none;
 			font-weight: 500;
 			box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+
+			&:hover{
+				background: $Color-Principal;
+			}
 		}
 }
 
@@ -543,11 +550,19 @@ justify-content: center;
   }
 
   .accordion{
+		margin-top: 50px;
+		width: 80%;
+		margin-left: 10%;
 
 	  .box{
 		  position: relative;
-		  margin: 10px 20px;
+		  margin: 20px 20px;
 		  background: rgba(54, 52, 52, 0.1);
+		  box-shadow: 0 0 2px gray, 0 0 5px gray, 0 0 10px gray;
+
+		  &:hover{
+			box-shadow: $Box-Shadow__card;
+		}
 
 		  .title-about{
 			  position: relative;
@@ -556,6 +571,10 @@ justify-content: center;
 			  background: $BackgroundNav2;
 			  color: white;
 			  cursor: pointer;
+
+			&:hover{
+				color: $Color-Principal;
+			} 
 
 			  &::before{
 				  content: "+";
@@ -569,17 +588,36 @@ justify-content: center;
 
 		  .content-about{
 			  position: relative;
-			  
 			  background: $BackgroundContact1;
 			  background: $BackgroundContact2;
+			  color: white;
 			  height: 0;
 			  overflow: hidden;
 			  transition: 0.5s;
 			  overflow: auto;
+			  overflow-y:hidden;
+
+			  p{
+				  margin-top: 10px;
+			  }
 		  }
+
+	
 	  }
 
+	  	.active .content-about{
+			height: 200px;
+			padding: 10px;
+  		}
+  		.active .title-about{
+		
+			&::before{
+				content: '-';
+			}
+		}
   }
+
+
 
 
 /*FORM CONTACT*/
