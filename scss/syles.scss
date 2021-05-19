@@ -10,7 +10,6 @@
 body {
 	background: black;
 	height: 100vh;
-	
 }
 /*FUENTE*/
 $font-sizes:(
@@ -92,7 +91,7 @@ justify-content: center;
 
 /*TEXTO PRINCIPAL INDEX*/
 .texto-principal1{
-	font-size: 40px;
+	font-size: 37px;
 	color: $Color-Principal;
 	margin: 50px;
 	padding: 20px; }
@@ -102,6 +101,9 @@ justify-content: center;
 	color: $Color-Principal;
 	margin-top: 50px;
 	margin-left: 70px;
+
+	
+	  
 	
 
 	// .span1{
@@ -119,6 +121,31 @@ justify-content: center;
 	// 	border-left: 1px solid $Color-Principal;
 	// }
 }
+
+.maquina-escribir {
+	background: black;
+	position: relative;
+  }
+  
+  .maquina-escribir::after {
+	content: "";
+	border-left: 3px solid $Color-Principal;
+	background: black;
+	margin: 4px;
+	right: 0;
+	height: 100%;
+	position: absolute;
+	animation: maquinaescribir 6s infinite alternate steps(60);
+  }
+  
+  @keyframes maquinaescribir {
+	from {
+	  width: 100%;
+	}
+	to {
+	  width: 0;
+	}
+  }
 
 /*CONTENIDO GENERAL*/
 .content{
@@ -377,67 +404,85 @@ justify-content: center;
     .flexbox-work {
             flex-direction: column;
       }
-
+ }
 	  
 
 /*BLOG*/
-.flexbox-blog{
-	display: flex;
-    justify-content: start;
-    p{
-	    text-align: left;
-        margin: 10px;
-    }
 
-	
- }
-.articulo-imagen{
-	width: 300px;
-	height: 200px;
-	display: flex;
-	margin: 20px 1px;
-	border-radius: $BorderRadius20;
-}
 
-@media (max-width: 920px) {
-    .flexbox-blog {
-            flex-direction: column;
-      }
-}
-}
-@mixin banner($mi-ancho, $imagen){
+
+.blog-container{
+	position: relative;
 	display: flex;
-	flex-direction: column;
-	align-items: start;
 	justify-content: center;
-	min-height: $mi-ancho;
-	@if( $imagen == blog1){
-		background-image: url('../media/imagenes/articulo1.jpg');
-	}@else if($imagen == blog2){
-		background-image: url('../media/imagenes/articulo2.jpg');
-	}@else{
-		background-image: url('../media/imagenes/articulo3.jpg');
+	align-items: center;
+	
+	flex-wrap: wrap;
+	z-index: 1;
+
+
+
+	.blog-article{
+		position: relative;
+		width: 280px;
+		height: 400px;
+		margin: 20px;
+		border-radius: 15px;
+		background: rgba(54, 52, 52, 0.1);
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-top: 1px solid rgba(255, 255, 255, 0.05);
+		border-left: 1px solid rgba(255, 255, 255, 0.05);
+		backdrop-filter: blur(5px);
+
+		&:hover{
+			box-shadow: $Box-Shadow__contact;
+		}
+
 	}
-	background-image: $imagen;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	margin-top: 60px;
-	padding: 0 20px;
-	color: #fff;
-	h3{
-		font-size: 2rem;
-		margin-bottom: 0.5em;
+	.blog-content{
+		padding: 20px;
+		text-align: center;
+		transition: 0.5s;
+		transform: translateY(100px);
+		opacity: 0;
+
+		&:hover{
+			transform: translateY(0px);
+			opacity: 1;
+		}
 	}
-}
-.bannerblog1{
-	@include banner(400px, blog1);
-}
-.bannerblog2{
-	@include banner(200px, blog2);
-}
-.bannerblog3{
-	@include banner(200px, blog3);
+		.blog-content h2{
+			position: absolute;
+			top: -80px;
+			right: 30px;
+			font-size: 8rem;
+			color: rgba(white, 0.05);
+		}
+		.blog-content h3{
+			font-size: 1.8rem;
+			color: white;
+			z-index: 1;
+		}
+		.blog-content p{
+			font-size: 1rem;
+			color: white;
+			font-weight: 300;
+		}
+		.blog-content a{
+			position: relative;
+			display: inline-block;
+			padding: 8px 20px;
+			margin-top: 15px;
+			background: white;
+			color: black;
+			border-radius: 20px;
+			text-decoration: none;
+			font-weight: 500;
+			box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+		}
 }
 
 /*ABOUT*/

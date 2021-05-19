@@ -35,9 +35,16 @@ strong h1 { display: flex; text-align: center; justify-content: center; font-fam
 @media (min-width: 1300px) { .navbar .nav-work { margin-left: 600px; } }
 
 /*TEXTO PRINCIPAL INDEX*/
-.texto-principal1 { font-size: 40px; color: #33ff66; margin: 50px; padding: 20px; }
+.texto-principal1 { font-size: 37px; color: #33ff66; margin: 50px; padding: 20px; }
 
 .texto-principal2 { font-size: 40px; color: #33ff66; margin-top: 50px; margin-left: 70px; }
+
+.maquina-escribir { background: black; position: relative; }
+
+.maquina-escribir::after { content: ""; border-left: 3px solid #33ff66; background: black; margin: 4px; right: 0; height: 100%; position: absolute; animation: maquinaescribir 6s infinite alternate steps(60); }
+
+@keyframes maquinaescribir { from { width: 100%; }
+  to { width: 0; } }
 
 /*CONTENIDO GENERAL*/
 .content { color: #33ff66; text-align: justify; margin: 30px 50px; }
@@ -116,25 +123,26 @@ strong h1 { display: flex; text-align: center; justify-content: center; font-fam
 
 .work-proyect:hover { box-shadow: 0 0 3px #33ff66, 0 0 5px #33ff66, 0 0 10px #33ff66; }
 
-@media (max-width: 1080px) { .flexbox-work { flex-direction: column; }
-  /*BLOG*/
-  .flexbox-blog { display: flex; justify-content: start; }
-  .flexbox-blog p { text-align: left; margin: 10px; }
-  .articulo-imagen { width: 300px; height: 200px; display: flex; margin: 20px 1px; border-radius: 20px; } }
+@media (max-width: 1080px) { .flexbox-work { flex-direction: column; } }
 
-@media (max-width: 1080px) and (max-width: 920px) { .flexbox-blog { flex-direction: column; } }
+/*BLOG*/
+.blog-container { position: relative; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; z-index: 1; }
 
-.bannerblog1 { display: flex; flex-direction: column; align-items: start; justify-content: center; min-height: 400px; background-image: url("../media/imagenes/articulo1.jpg"); background-image: blog1; background-repeat: no-repeat; background-size: cover; background-position: center; margin-top: 60px; padding: 0 20px; color: #fff; }
+.blog-container .blog-article { position: relative; width: 280px; height: 400px; margin: 20px; border-radius: 15px; background: rgba(54, 52, 52, 0.1); overflow: hidden; display: flex; justify-content: center; align-items: center; border-top: 1px solid rgba(255, 255, 255, 0.05); border-left: 1px solid rgba(255, 255, 255, 0.05); backdrop-filter: blur(5px); }
 
-.bannerblog1 h3 { font-size: 2rem; margin-bottom: 0.5em; }
+.blog-container .blog-article:hover { box-shadow: 0 0 10px #33ff66, 0 0 20px #33ff66, 0 0 40px #33ff66; }
 
-.bannerblog2 { display: flex; flex-direction: column; align-items: start; justify-content: center; min-height: 200px; background-image: url("../media/imagenes/articulo2.jpg"); background-image: blog2; background-repeat: no-repeat; background-size: cover; background-position: center; margin-top: 60px; padding: 0 20px; color: #fff; }
+.blog-container .blog-content { padding: 20px; text-align: center; transition: 0.5s; transform: translateY(100px); opacity: 0; }
 
-.bannerblog2 h3 { font-size: 2rem; margin-bottom: 0.5em; }
+.blog-container .blog-content:hover { transform: translateY(0px); opacity: 1; }
 
-.bannerblog3 { display: flex; flex-direction: column; align-items: start; justify-content: center; min-height: 200px; background-image: url("../media/imagenes/articulo3.jpg"); background-image: blog3; background-repeat: no-repeat; background-size: cover; background-position: center; margin-top: 60px; padding: 0 20px; color: #fff; }
+.blog-container .blog-content h2 { position: absolute; top: -80px; right: 30px; font-size: 8rem; color: rgba(255, 255, 255, 0.05); }
 
-.bannerblog3 h3 { font-size: 2rem; margin-bottom: 0.5em; }
+.blog-container .blog-content h3 { font-size: 1.8rem; color: white; z-index: 1; }
+
+.blog-container .blog-content p { font-size: 1rem; color: white; font-weight: 300; }
+
+.blog-container .blog-content a { position: relative; display: inline-block; padding: 8px 20px; margin-top: 15px; background: white; color: black; border-radius: 20px; text-decoration: none; font-weight: 500; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); }
 
 /*ABOUT*/
 .about { display: inline-block; color: #33ff66; text-align: left; height: 200px; margin: 40px; }
