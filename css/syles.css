@@ -70,7 +70,7 @@ strong h1 { display: flex; text-align: center; justify-content: center; font-fam
 @keyframes maquinaescribir { from { width: 100%; }
   to { width: 0; } }
 
-.cards { font-family: "Roboto Mono", monospace; display: flex; justify-content: center; align-items: center; margin: 20px; }
+.cards { font-family: "Roboto Mono", monospace; display: flex; justify-content: center; align-items: center; margin: 50px 20px; }
 
 @media (max-width: 1080px) { .cards { flex-wrap: wrap; margin-top: 20px; margin-bottom: 40px; } }
 
@@ -142,7 +142,7 @@ strong h1 { display: flex; text-align: center; justify-content: center; font-fam
 @keyframes maquinaescribir { from { width: 100%; }
   to { width: 0; } }
 
-.blog-container { position: relative; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; z-index: 1; }
+.blog-container { position: relative; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; z-index: 1; margin-top: 30px; }
 
 .blog-container .blog-article { position: relative; width: 280px; height: 400px; margin: 20px; border-radius: 15px; background: rgba(54, 52, 52, 0.1); overflow: hidden; display: flex; justify-content: center; align-items: center; border-top: 1px solid rgba(255, 255, 255, 0.05); border-left: 1px solid rgba(255, 255, 255, 0.05); box-shadow: 0 0 2px gray, 0 0 5px gray, 0 0 10px gray; }
 
@@ -163,7 +163,7 @@ strong h1 { display: flex; text-align: center; justify-content: center; font-fam
 .blog-container .blog-content a:hover { background: #33ff66; }
 
 /*ABOUT*/
-.about { display: flex; justify-content: center; align-items: center; }
+.about { display: flex; justify-content: center; align-items: center; height: 100vh; }
 
 .maquina-about { background: black; position: relative; }
 
@@ -172,7 +172,7 @@ strong h1 { display: flex; text-align: center; justify-content: center; font-fam
 @keyframes maquinaescribir { from { width: 100%; }
   to { width: 0; } }
 
-.accordion { margin-top: 50px; width: 80%; margin-left: 10%; }
+.accordion { margin-top: 100px; width: 80%; margin-left: 10%; }
 
 .accordion .box { position: relative; margin: 20px 20px; background: rgba(54, 52, 52, 0.1); box-shadow: 0 0 2px gray, 0 0 5px gray, 0 0 10px gray; }
 
@@ -184,13 +184,16 @@ strong h1 { display: flex; text-align: center; justify-content: center; font-fam
 
 .accordion .box .title-about::before { content: "+"; position: absolute; top: 50%; right: 20px; transform: translateY(-50%); font-size: 1.5rem; }
 
-.accordion .box .content-about { position: relative; background: #1a1a1a; background: linear-gradient(90deg, #1a1a1a 26%, black 100%); color: white; height: 0; overflow: hidden; transition: 0.5s; overflow: auto; overflow-y: hidden; }
+.accordion .box .content-about { position: relative; background: #1a1a1a; background: linear-gradient(90deg, #1a1a1a 26%, black 100%); color: white; height: 0; overflow: hidden; transition: 0.5s; overflow: auto; overflow-y: hidden; text-align: justify; }
 
 .accordion .box .content-about p { margin-top: 10px; }
 
-.accordion .active .content-about { height: 200px; padding: 10px; }
+.accordion .active .content-about { height: 150px; padding: 10px; }
 
-.accordion .active .title-about::before { content: '-'; }
+@media (max-width: 810px) { .accordion .active .content-about { text-align: center; height: 200px; padding: 10px; } }
+
+@media (max-width: 810px) { .accordion .active .content-long { text-align: center; height: 380px; padding: 10px; }
+  .accordion .active .title-about::before { content: '-'; } }
 
 /*FORM CONTACT*/
 .maquina-contact { background: black; position: relative; }
@@ -200,7 +203,7 @@ strong h1 { display: flex; text-align: center; justify-content: center; font-fam
 @keyframes maquinaescribir { from { width: 100%; }
   to { width: 0; } }
 
-.form-contact { margin: 50px auto; border-radius: 20px; width: 50%; height: 100%; background: #1a1a1a; background: linear-gradient(90deg, #1a1a1a 26%, black 100%); color: #33ff66; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+.form-contact { margin: 100px auto; border-radius: 20px; width: 50%; height: 100%; background: #1a1a1a; background: linear-gradient(90deg, #1a1a1a 26%, black 100%); color: #33ff66; padding: 20px; display: flex; flex-direction: column; align-items: center; box-shadow: 0 0 2px gray, 0 0 5px gray, 0 0 10px gray; }
 
 .form-contact:hover { box-shadow: 0 0 10px #33ff66, 0 0 20px #33ff66, 0 0 40px #33ff66; }
 
@@ -217,7 +220,7 @@ strong h1 { display: flex; text-align: center; justify-content: center; font-fam
 .send-button:hover { background-color: #33ff66; border: #33ff66; color: black; }
 
 /*FOOTER*/
-.footer-container { margin-top: 100px; display: flex; align-items: center; flex-direction: column; justify-content: center; background: black; background: linear-gradient(90deg, black 24%, #111010 60%, #111010 81%, #161515 95%); text-decoration: none; }
+.footer-container { margin-top: 150px; display: flex; align-items: center; flex-direction: column; justify-content: center; background: black; background: linear-gradient(90deg, black 24%, #111010 60%, #111010 81%, #161515 95%); text-decoration: none; }
 
 .footer-text { color: white; font-size: 20px; padding: 8px; margin-top: 10px; }
 
