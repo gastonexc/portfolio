@@ -132,7 +132,7 @@ justify-content: center;
 	background: black;
 	margin: 4px;
 	right: 0;
-	height: 100%;
+	height: 50px;
 	position: absolute;
 	animation: maquinaescribir 5s infinite alternate steps(55);
   }
@@ -209,7 +209,7 @@ justify-content: center;
 	background: black;
 	margin: 4px;
 	right: 0;
-	height: 100%;
+	height: 50px;
 	position: absolute;
 	animation: maquinaescribir 1.5s infinite alternate steps(10);
   }
@@ -462,7 +462,7 @@ justify-content: center;
 	background: black;
 	margin: 4px;
 	right: 0;
-	height: 100%;
+	height: 50px;
 	position: absolute;
 	animation: maquinaescribir 1s infinite alternate steps(6);
   }
@@ -681,7 +681,7 @@ justify-content: center;
 	background: black;
 	margin: 4px;
 	right: 0;
-	height: 100%;
+	height: 50px;
 	position: absolute;
 	animation: maquinaescribir 2s infinite alternate steps(10);
   }
@@ -802,7 +802,7 @@ justify-content: center;
 	background: black;
 	margin: 4px;
 	right: 0;
-	height: 100%;
+	height: 50px;
 	position: absolute;
 	animation: maquinaescribir 2s infinite alternate steps(20);
   }
@@ -815,6 +815,12 @@ justify-content: center;
 	  width: 0;
 	}
   }
+
+  @media (max-width:420px){
+	.maquina-contact::after{
+		animation: maquinaescribir 1s infinite alternate steps(8);
+		height: 50px;
+	} }
   
 
 .form-contact{
