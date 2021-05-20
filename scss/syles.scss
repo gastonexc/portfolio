@@ -96,6 +96,16 @@ justify-content: center;
 	color: $Color-Principal;
 	margin: 50px;
 	padding: 20px; }
+
+.texto-principal3{
+	text-align: center;
+	color: white;
+	font-size: 30px;
+
+	&:hover{
+		text-shadow: $Text-Shadow;
+	}
+}
 	
 .texto-principal2{
 	font-size: 40px;
@@ -133,7 +143,7 @@ justify-content: center;
 .content{
 	color:$Color-Principal;
 	text-align: justify;
-	margin: 30px 50px;
+	margin: 30px 100px;
 }
 
 /*WHATSAPP ICONO*/
@@ -518,6 +528,116 @@ justify-content: center;
 		}
 }
 
+// ARTICLES 
+.title-container{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	z-index: 1;
+	margin-top: 30px;
+
+	.title-article{
+		position: relative;
+		width: 80%;
+		height: 20%;
+		margin: 20px;
+		border-radius: 15px;
+		background: rgba(54, 52, 52, 0.1);
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-top: 1px solid rgba(255, 255, 255, 0.05);
+		border-left: 1px solid rgba(255, 255, 255, 0.05);
+		box-shadow: 0 0 2px gray, 0 0 5px gray, 0 0 10px gray;
+
+		&:hover{
+			box-shadow: $Box-Shadow__contact;
+		}
+
+	}
+	.article-content{
+		padding: 20px;
+		text-align: center;
+		transition: 0.5s;
+		transform: translateY(60px);
+		opacity: 0;
+
+		&:hover{
+			transform: translateY(0px);
+			opacity: 1;
+		}
+	}
+		.article-content h2{
+			position: absolute;
+			top: -80px;
+			right: 30px;
+			font-size: 8rem;
+			color: rgba(white, 0.05);
+		}
+		.article-content h3{
+			font-size: 1.8rem;
+			color: white;
+			z-index: 1;
+		}
+		.article-content p{
+			font-size: 1rem;
+			color: white;
+			font-weight: 300;
+		}
+		.article-content a{
+			position: relative;
+			display: inline-block;
+			padding: 8px 20px;
+			margin-top: 15px;
+			background: white;
+			color: black;
+			border-radius: 20px;
+			text-decoration: none;
+			font-weight: 500;
+			box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+
+			&:hover{
+				background: $Color-Principal;
+			}
+		}
+}
+
+.img-article{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 20%;
+	margin-top: 50px;
+	height: 400px;
+	width: 800px;
+	box-shadow: $Box-Shadow__card;
+}
+
+.img-article2{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 40px;
+	margin-top: 50px;
+}
+
+.youtube-article{
+	margin-top: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.content-article{
+	color: white;
+	text-align: justify;
+	margin:50px 60px;
+	font-size: 1.2rem;
+}
+
 /*ABOUT*/
 .about{
 	display: flex;
@@ -760,7 +880,6 @@ justify-content: center;
 	margin-top: 10px;
 
 	&:hover{
-		color:white;
 		text-shadow: $Text-Shadow;
 	}
 }
