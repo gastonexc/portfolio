@@ -94,8 +94,14 @@ justify-content: center;
 .texto-principal1{
 	font-size: 37px;
 	color: $Color-Principal;
-	margin: 50px;
-	padding: 20px; }
+	margin: 20px;
+	padding: 10px; }
+	
+	@media (min-width:980px){
+		.texto-principal1{
+			font-size: 25px;
+		}
+		 }
 
 .texto-principal3{
 	text-align: center;
@@ -144,6 +150,12 @@ justify-content: center;
 		animation: maquinaescribir 3s infinite alternate steps(19);
 		height: 40px;
 	} }
+
+	@media (max-width:420px){
+		.maquina-escribir::after{
+			animation: maquinaescribir 1s infinite alternate steps(4);
+			height: 40px;
+		} }
 
 /*CONTENIDO GENERAL*/
 .content{
