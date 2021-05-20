@@ -90,16 +90,17 @@ justify-content: center;
 			}
 }
 
-/*TEXTO PRINCIPAL INDEX*/
+/*INDEX*/
 .texto-principal1{
 	font-size: 37px;
 	color: $Color-Principal;
 	margin: 20px;
 	padding: 10px; }
 	
-	@media (min-width:980px){
+	@media (max-width: 780px){
 		.texto-principal1{
 			font-size: 25px;
+			margin: 10px;
 		}
 		 }
 
@@ -153,8 +154,8 @@ justify-content: center;
 
 	@media (max-width:420px){
 		.maquina-escribir::after{
-			animation: maquinaescribir 1s infinite alternate steps(4);
-			height: 40px;
+			animation: maquinaescribir 2s infinite alternate steps(12);
+			height: 30px;
 		} }
 
 /*CONTENIDO GENERAL*/
@@ -909,6 +910,8 @@ justify-content: center;
 	justify-content: center;
     background: $BackgroundNav1;
 	background: $BackgroundNav2;
+	position: absolute;
+	width: 100%;
 	
 	text-decoration: none;
  }
