@@ -139,12 +139,23 @@ justify-content: center;
 	}
   }
 
+  @media (max-width:1200px){
+	.maquina-escribir::after{
+		animation: maquinaescribir 3s infinite alternate steps(19);
+		height: 40px;
+	} }
+
 /*CONTENIDO GENERAL*/
 .content{
 	color:$Color-Principal;
 	text-align: justify;
 	margin: 30px 100px;
 }
+
+@media (max-width:580px){
+	.content{
+		text-align: center;
+	} }
 
 /*WHATSAPP ICONO*/
 .whatsapp-icono{
@@ -733,19 +744,25 @@ justify-content: center;
 			padding: 10px;
   		}
 
-		  @media (max-width: 810px) {
+		@media (max-width: 810px) {
 			.active .content-about{
 				text-align: center;
 				height: 200px;
 				padding: 10px;
 			  } }
 
-			  @media (max-width: 810px) {
+		@media (max-width: 810px) {
 				.active .content-long{
 					text-align: center;
 					height: 380px;
 					padding: 10px;
 				  }
+		@media (max-width: 810px) {
+				.active .content-short{
+					text-align: justify;
+					height: 150px;
+					padding: 10px;
+				  } }
 
   		.active .title-about{
 		
@@ -785,7 +802,7 @@ justify-content: center;
 	  width: 0;
 	}
   }
-
+  
 
 .form-contact{
 	margin:100px auto;
@@ -860,6 +877,16 @@ justify-content: center;
 .send-button{
     @include button();
 }
+
+@media (max-height: 840px) {
+	.form-contact{
+		height: 80%;
+	  } }
+
+@media (max-height: 640px) {
+	.form-contact{
+		height: 100%;
+	  } }
 
 /*FOOTER*/
 .footer-container{
